@@ -67,7 +67,8 @@ def load_graph(graph_name):
     folder_path = path.join('graphs', graph_name)
 
     graph_data = deserialize_dict(file_path=path.join(folder_path, 'graph_data.pkl.gz'))
-    graph = ox.load_graphml(filename='graph.graphml', folder=folder_path)
+    #graph = ox.load_graphml(filename='graph.graphml', folder=folder_path)
+    graph = ox.load_graphml(filepath=os.path.join(folder_path,'graph.graphml'))
     # graph = nx.MultiDiGraph(nx.read_graphml(path.join(folder_path, 'graph.graphml'), node_type=int))
 
     if not nx.is_strongly_connected(graph):
