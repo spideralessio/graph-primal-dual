@@ -10,7 +10,7 @@ from utils.utils import serialize_dict, deserialize_dict, append_row_to_log
 from utils.utils import delete_if_exists
 from core.plot import plot_road_graph
 from annoy import AnnoyIndex
-
+import os
 
 def save_graph(target, graph_name, distance=1000, is_address=True):
 
